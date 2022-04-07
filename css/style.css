@@ -37,13 +37,21 @@ a {
   border-radius: 1.25rem;
 }
 
-.h1-login,  h4.success{
-  color: #ffff;
+.h1-login,
+h4.success {
   background-color: rgb(0, 0, 0, 0.5);
 }
 #page-login h4.success {
   text-align: center;
- 
+}
+
+.bg-light {
+  background-color: #e9ecef !important;
+}
+
+#bg-home {
+  background-image: url("./../img/bg_home.jpg");
+  background-size: cover;
 }
 
 /* Task Manager page */
@@ -112,12 +120,19 @@ a {
   margin-left: 3em;
 }
 
+.jumbotron-fluid {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px !important;
+}
+
+
 /*-----Query Responsive Portrait---*/
 
 @media (max-width: 767px) {
   .jumbotron .info {
     margin-left: 0;
   }
+
   #containerJumbo {
     margin-left: 0;
     text-align: center;

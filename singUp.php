@@ -18,8 +18,8 @@
 
 <body id="page-singup">
     <div class="container" id="signup">
-    <div class="h1-login">
-            <h1>GEORGIAN CMS</h1>
+        <div class="h1-login">
+            <img src="./img/logo.png" alt="" width="325">
         </div>
         <hr>
         <div class="row justify-content-center mt-5">

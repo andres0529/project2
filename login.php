@@ -19,7 +19,7 @@
 <body id="page-login">
     <div class="container" id="login">
         <div class="h1-login">
-            <h1>GEORGIAN CMS</h1>
+        <img src="./img/logo.png" alt="" width="325">
         </div>
         <hr>
         <?php userCreated(); ?>
