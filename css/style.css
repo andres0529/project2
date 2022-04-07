@@ -1,0 +1,133 @@
+#login > div,
+#signup > div {
+  margin: 1em 0em;
+  text-align: center;
+}
+
+#signup .form-group,
+#login .form-group {
+  text-align: initial;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#signup span,
+#login span {
+  color: red;
+  background-color: #ffff;
+}
+
+#page-login,
+#page-singup {
+  background-image: url("./../img/bg_login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page-login .card,
+#page-singup .card {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 1.25rem;
+}
+
+.h1-login,  h4.success{
+  color: #ffff;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+#page-login h4.success {
+  text-align: center;
+ 
+}
+
+/* Task Manager page */
+
+#task-manager #details {
+  height: 300px;
+}
+
+#task-manager #resultSearch {
+  height: 200px;
+}
+
+#task-manager button {
+  margin-bottom: 1em;
+}
+
+#task-manager div#create {
+  background-color: #3333;
+}
+
+#task-manager div#update {
+  background-color: cornsilk;
+}
+
+#task-manager div#delete {
+  background-color: #3333;
+}
+
+/*general css modal*/
+
+.modal {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: 5em;
+  left: 0;
+  color: #333;
+}
+
+.modal div {
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.error div {
+  background-color: coral;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Home page*/
+
+.jumbotron .info,
+#containerJumbo {
+  margin-left: 3em;
+}
+
+/*-----Query Responsive Portrait---*/
+
+@media (max-width: 767px) {
+  .jumbotron .info {
+    margin-left: 0;
+  }
+  #containerJumbo {
+    margin-left: 0;
+    text-align: center;
+  }
+  #navbarNavAltMarkup {
+    margin-top: 1em;
+  }
+  .navbar-nav {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 1em;
+  }
+}
