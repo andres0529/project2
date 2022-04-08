@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
-    <title>Manage Users</title>
+    <title>Manage Pages</title>
 </head>
 
 <body class="bg-general" id="table-users">
@@ -22,7 +23,7 @@ session_start();
     //IT Valides if the user is resgitered and has logged in session
     if (isset($_SESSION["useremail"])) {
         include './components/header.php';
-        include './includes/manage_users/table_users.php';
+      
 
     } else {
 

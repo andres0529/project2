@@ -10,7 +10,7 @@
         <div class="navbar-nav d-flex justify-content-around w-75">
             <a class="nav-item nav-link" href="./home.php">Home </a>
             <a class="nav-item nav-link" href="./manage_users.php">Manage Users</a>
-            <a class="nav-item nav-link" href="./taskmanager.php">Manage Pages</a>
+            <a class="nav-item nav-link" href="./manage_pages.php">Manage Pages</a>
             <a class="nav-item nav-link" href="./includes/logout.inc.php">Log Out</a>
         </div>
     </div>

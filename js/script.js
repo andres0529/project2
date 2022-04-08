@@ -15,13 +15,15 @@ var p = {
   addNewButton: document.querySelector("#table-users .addNewButton"),
   popUpEdit: document.querySelector("#table-users #pop-up-edit"),
   popUpDelete: document.querySelector("#table-users #popUpDelete"),
-  popUpAdd: document.querySelector("#table-users #pop-up-add"),
+
   cancelPopUpEdit: document.querySelector("#table-users .cancelPopUpEdit"),
   cancelPopUpDelete: document.querySelector("#table-users .cancelPopUpDelete"),
-  cancelPopUpAdd: document.querySelector("#table-users .cancelPopUpAdd"),
 
   //elements inside the popup delete
-  emailconfirmation: document.querySelector("#table-users #popUpDelete #email"),
+  emailtodelete: document.querySelector("#table-users #popUpDelete #email"),
+  emailtoedit: document.querySelector("#table-users #pop-up-edit #email"),
+  usernametoedit: document.querySelector("#table-users #pop-up-edit #username"),
+  fullnametoedit: document.querySelector("#table-users #pop-up-edit #fullname"),
 };
 
 /*=============================================
@@ -36,7 +38,6 @@ var m = {
       p.editButtons[i].setAttribute("disabled", "true");
       p.deleteButtons[i].setAttribute("disabled", "true");
     }
-    p.addNewButton.setAttribute("disabled", "true");
   },
   //function to unblock all the buttons
   unblockButtons: () => {
@@ -44,16 +45,17 @@ var m = {
       p.editButtons[i].removeAttribute("disabled");
       p.deleteButtons[i].removeAttribute("disabled");
     }
-    p.addNewButton.removeAttribute("disabled");
   },
-
 
   manage_users_page: () => {
     //add eventlistener to all the Edit buttons
     [...p.editButtons].map((element) =>
-      element.addEventListener("click", () => {
+      element.addEventListener("click", (event) => {
         m.blockButtons();
         p.popUpEdit.classList.remove("hidden-popup");
+        p.emailtoedit.value = event.target.id;
+        p.usernametoedit.value = event.target.dataset.username;
+        p.fullnametoedit.value = event.target.dataset.fullname;
       })
     );
     //function cancel button to edit
@@ -67,7 +69,7 @@ var m = {
       element.addEventListener("click", (event) => {
         m.blockButtons();
         p.popUpDelete.classList.remove("hidden-popup");
-        p.emailconfirmation.value = event.target.id;
+        p.emailtodelete.value = event.target.id;
       });
     });
     //function cancel button to Delete
@@ -75,19 +77,7 @@ var m = {
       m.unblockButtons();
       p.popUpDelete.classList.add("hidden-popup");
     });
-
-    //add eventlistener to add new button
-    p.addNewButton.addEventListener("click", () => {
-      m.blockButtons();
-      p.popUpAdd.classList.remove("hidden-popup");
-    });
-    //function cancel button to add
-    p.cancelPopUpAdd.addEventListener("click", () => {
-      m.unblockButtons();
-      p.popUpAdd.classList.add("hidden-popup");
-    });
   },
-
 
   /*******-------Main Function --------- *****/
   mainFunction: () => {
@@ -102,6 +92,9 @@ var m = {
     //swith to active the script depending on the page that we are
     switch (p.location) {
       case "manage_users.php":
+        m.manage_users_page();
+        break;
+      case "manage_users.php?error=emailexists":
         m.manage_users_page();
         break;
 

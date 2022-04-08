@@ -14,9 +14,6 @@
             <?php require_once './includes/manage_users/download-users.php'; ?>
         </tbody>
     </table>
-    <div>
-        <button type="button" class="btn btn-primary addNewButton mt-2 mb-3">Add a New User</button>
-    </div>
 </div>
 
 <!-- Pop up for edit the user selected -->
@@ -24,8 +21,3 @@
 
 <!-- Pop up fpr Delete the user selected -->
 <?php require_once './includes/manage_users/delete-popup.php'; ?>
-
-<!-- Pop up fpr Delete the user selected -->
-<?php require_once './includes/manage_users/add-popup.php'; ?>
-
-

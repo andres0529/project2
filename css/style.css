@@ -110,9 +110,7 @@ h4.success {
   width: 100%;
 }
 #pop-up-edit,
-#popUpDelete,
-#pop-up-add
-{
+#popUpDelete{
   position: absolute;
   background-color: rgb(0, 0, 0, 0.5);
   top: 20vh;
@@ -142,6 +140,14 @@ h4.success {
   border: none;
   color: #fff;
   width: 100%;
+}
+
+#table-users #manage-user-error {
+  background-color: red;
+  margin: auto;
+  width: 30%;
+  text-align: center;
+  color: #fff;
 }
 
 /*-----Query Responsive Portrait---*/
