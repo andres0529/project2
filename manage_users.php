@@ -13,15 +13,16 @@ session_start();
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
     <title>Home</title>
 </head>
 
-<body id="bg-home">
+<body class="bg-general" id="table-users">
     <?php
     //IT Valides if the user is resgitered and has logged in session
     if (isset($_SESSION["useremail"])) {
         include './components/header.php';
-        include './components/home-design.php';
+        include './includes/manage_users/table_users.php';
 
     } else {
 
@@ -30,9 +31,6 @@ session_start();
 
     ?>
 
-
-
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

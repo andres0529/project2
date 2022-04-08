@@ -43,77 +43,19 @@ h4.success {
 }
 #page-login h4.success {
   text-align: center;
+  color: #ffcf00;
+}
+
+/*Home page*/
+.bg-general {
+  background-image: url(./../img/bg_home.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .bg-light {
   background-color: #e9ecef !important;
 }
-
-#bg-home {
-  background-image: url("./../img/bg_home.jpg");
-  background-size: cover;
-}
-
-/* Task Manager page */
-
-#task-manager #details {
-  height: 300px;
-}
-
-#task-manager #resultSearch {
-  height: 200px;
-}
-
-#task-manager button {
-  margin-bottom: 1em;
-}
-
-#task-manager div#create {
-  background-color: #3333;
-}
-
-#task-manager div#update {
-  background-color: cornsilk;
-}
-
-#task-manager div#delete {
-  background-color: #3333;
-}
-
-/*general css modal*/
-
-.modal {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 500px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  top: 5em;
-  left: 0;
-  color: #333;
-}
-
-.modal div {
-  width: 100%;
-  background-color: lightgreen;
-}
-
-.error div {
-  background-color: coral;
-}
-
-.form-control:focus {
-  box-shadow: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-/*Home page*/
 
 .jumbotron .info,
 #containerJumbo {
@@ -125,6 +67,82 @@ h4.success {
     rgba(0, 0, 0, 0.22) 0px 10px 10px !important;
 }
 
+/*Style for manage Users*/
+
+#table-users .container {
+  width: 90vw;
+  height: auto;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#table-users h1 {
+  text-align: center;
+  font-family: "Lucida Sans", sans-serif;
+  color: #004effc7;
+  background-color: #ffcf00a8;
+}
+
+#table-users table.table {
+  color: #ffff;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #386ac7;
+  border-color: #386ac7;
+}
+
+.btn-danger {
+  color: #2c4e60;
+  background-color: #ffcf00;
+  border-color: #ffcf00;
+}
+
+/*---Pop Up styles---*/
+.input-group-prepend {
+  width: 30%;
+}
+.input-group-prepend > span {
+  width: 100%;
+}
+#pop-up-edit,
+#popUpDelete,
+#pop-up-add
+{
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.5);
+  top: 20vh;
+  left: 40vw;
+  padding: 20px;
+  color: #fff;
+}
+
+#table-users .btn-success:hover {
+  color: #fff;
+  background-color: #386ac78a;
+  border-color: #386ac78a;
+}
+
+#table-users .btn-danger:hover {
+  color: #fff;
+  background-color: #ffcf00b3;
+  border-color: #ffcf00b3;
+}
+
+.hidden-popup {
+  display: none !important;
+}
+
+#popUpDelete input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+}
 
 /*-----Query Responsive Portrait---*/
 

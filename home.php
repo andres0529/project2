@@ -16,7 +16,7 @@ session_start();
     <title>Home</title>
 </head>
 
-<body id="bg-home">
+<body class="bg-general">
     <?php
     //IT Valides if the user is resgitered and has logged in session
     if (isset($_SESSION["useremail"])) {
