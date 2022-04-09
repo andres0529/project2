@@ -23,8 +23,23 @@ session_start();
     //IT Valides if the user is resgitered and has logged in session
     if (isset($_SESSION["useremail"])) {
         include './components/header.php';
-      
+        include './includes/manage-pages/table_pages.php';
 
+        if (isset($_GET["extwrong"])) {
+            echo "<div id='errorExtImg'>
+            <div>
+            Wrong file extension
+            </div>
+           </div>";
+        }
+
+        if (isset($_GET["saved"])) {
+            echo "<div id='saved'>
+            <div>
+            Saved successfully
+            </div>
+           </div>";
+        }
     } else {
 
         header("location: ./login.php");

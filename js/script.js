@@ -19,11 +19,22 @@ var p = {
   cancelPopUpEdit: document.querySelector("#table-users .cancelPopUpEdit"),
   cancelPopUpDelete: document.querySelector("#table-users .cancelPopUpDelete"),
 
-  //elements inside the popup delete
+  //elements inside the popup delete user
   emailtodelete: document.querySelector("#table-users #popUpDelete #email"),
   emailtoedit: document.querySelector("#table-users #pop-up-edit #email"),
   usernametoedit: document.querySelector("#table-users #pop-up-edit #username"),
   fullnametoedit: document.querySelector("#table-users #pop-up-edit #fullname"),
+
+  //elements inside the popup cretae page
+  cancelAddNewPage: document.querySelector("#popUpAddPage .cancelAddNewPage"),
+  popUpCreate: document.querySelector("#popUpAddPage"),
+  popUpAddNewPage: document.querySelector(".popUpAddNewPage"),
+
+  deleteButtonsPages: document.querySelectorAll(".deletePage"),
+  popUpDeletePage: document.querySelector("#popUpDeletePage"),
+  InputpopUpDeletePage: document.querySelector("#popUpDeletePage input"),
+  cancelPopUpDeletePage: document.querySelector("#popUpDeletePage .cancelPopUpDelete")
+  
 };
 
 /*=============================================
@@ -79,6 +90,29 @@ var m = {
     });
   },
 
+  manage_pages: () => {
+    p.cancelAddNewPage.addEventListener("click", () => {
+      p.popUpCreate.classList.add("hidden-popup");
+    });
+
+    p.popUpAddNewPage.addEventListener("click", () => {
+      p.popUpCreate.classList.remove("hidden-popup");
+    });
+
+    //add eventlistener to all the Delete buttons
+    [...p.deleteButtonsPages].map((element) => {
+      element.addEventListener("click", (e) => {
+        // console.log(e.target.id)
+        p.popUpDeletePage.classList.remove("hidden-popup")
+        p.InputpopUpDeletePage.value = e.target.id;
+      })
+    })
+
+    p.cancelPopUpDeletePage.addEventListener("click",() => {
+      p.popUpDeletePage.classList.add("hidden-popup")
+    })
+  },
+
   /*******-------Main Function --------- *****/
   mainFunction: () => {
     for (let i = 0; i < p.buttonsNavigation.length; i++) {
@@ -96,6 +130,9 @@ var m = {
         break;
       case "manage_users.php?error=emailexists":
         m.manage_users_page();
+        break;
+      case "manage_pages.php":
+        m.manage_pages();
         break;
 
       default:
