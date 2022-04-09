@@ -36,12 +36,6 @@ require './public/load_infoPage.php';
         include './includes/edit-page/wireframe_structure-b.php';
     }
     ?>
-
-    <!-- AQUI PIDO LLAMO QUE SE CARGUE LA INFORMACION SEGUN EL MENSAJE DE LAVBLE EN LA URL
-
-    QUERY CON LA VARIABLE Y LUEGO TRAIGO LA INFORMAION DE ESA PAGINA
-
--->
 </body>
 
 </html>

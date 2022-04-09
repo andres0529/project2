@@ -194,8 +194,7 @@ h4.success {
 
 /*--------------------Style for Edit Pages-----------------------*/
 #edit-input-right > nav > div > img,
-#public > nav > div > img
-{
+#public > nav > div > img {
   width: 100%;
 }
 
@@ -228,7 +227,8 @@ h4.success {
   align-items: center;
   height: auto;
 }
-#edit-input-right nav ul, #public nav ul {
+#edit-input-right nav ul,
+#public nav ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -236,12 +236,14 @@ h4.success {
   justify-content: space-around;
   align-items: center;
 }
-#edit-input-right nav > div, #public nav > div{
+#edit-input-right nav > div,
+#public nav > div {
   width: 19%;
   height: 100%;
 }
 
-#edit-input-right nav ul li, #public  nav ul li{
+#edit-input-right nav ul li,
+#public nav ul li {
   cursor: pointer;
   font-size: 18px;
   color: #ffff;
@@ -281,7 +283,7 @@ div#type-a-section2 {
 }
 
 div#type-b-img img {
-  width: 50%;
+  width: 35%;
 }
 div#type-b-section1,
 div#type-b-section2 {
@@ -297,7 +299,8 @@ div#type-a-section1 {
   padding: 20px;
 }
 
-div#errorExtImg, #saved {
+div#errorExtImg,
+#saved {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,4 +314,37 @@ div#errorExtImg > div {
 div#saved > div {
   background-color: green;
   color: #fff;
+}
+
+/* STYLE 404 PAGE */
+body#errorpage {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./../img/bg_login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffff;
+}
+
+#errorpage > div {
+  width: 70%;
+  height: 70%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div#button-error404 {
+  width: 250px;
+  height: 50px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
