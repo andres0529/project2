@@ -18,7 +18,9 @@ foreach ($pages as $page) {
                 <form method='POST' action='./edit-page.php'>
                     <button  name='edit' value='" . $page['page_id'] . "'type= 'submit'  class='btn btn-success editPage'>Edit</button>
                     <button id='" . $page['page_id'] . "'type='button' class='btn btn-danger deletePage'>Delete</button>
-                    <button id='" . $page['page_id'] . "'type='button' class='btn btn-danger seePage'>See</button>
+                    <button  type='button'  class='btn btn-danger seePage' >
+                        <a target='_blank' href='./index.php?page=".$page["page_id"] ."'>See</a>
+                    </button>
                 </form>
                 </td>
             </tr>
