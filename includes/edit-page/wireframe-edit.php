@@ -1,6 +1,5 @@
 <?php
-require_once './includes/edit-page/download-infoPage.php';
-
+require './includes/edit-page/download-infoPage.php';
 ?>
 
 <div id="container-edit-page">

@@ -193,7 +193,9 @@ h4.success {
 }
 
 /*--------------------Style for Edit Pages-----------------------*/
-#edit-input-right > nav > div > img {
+#edit-input-right > nav > div > img,
+#public > nav > div > img
+{
   width: 100%;
 }
 
@@ -218,14 +220,15 @@ h4.success {
 }
 
 /* Edit preview page  */
-#edit-input-right nav {
+#edit-input-right nav,
+#public nav {
   display: flex;
   background-color: #4a7065;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: auto;
 }
-#edit-input-right nav ul {
+#edit-input-right nav ul, #public nav ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -233,12 +236,12 @@ h4.success {
   justify-content: space-around;
   align-items: center;
 }
-#edit-input-right nav > div {
+#edit-input-right nav > div, #public nav > div{
   width: 19%;
   height: 100%;
 }
 
-#edit-input-right nav ul li {
+#edit-input-right nav ul li, #public  nav ul li{
   cursor: pointer;
   font-size: 18px;
   color: #ffff;
